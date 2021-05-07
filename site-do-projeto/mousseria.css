@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: url(img/fundo.png);
+    background-size: cover;
+}
+
+/*HEADER*/
+.header{
+    background-color: blue;
+    overflow: auto;
+    border-bottom: 5px solid yellow;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 9px 0;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    z-index: 999 !important;
+    
+}
+
+
+.header img {
+    margin-left: 10px;
+    height: 50px;
+    float: left;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.titulo {
+    float: left;
+    margin: 0.5%;
+}
+
+
+a{
+    text-decoration: none;
+}
+.destaque {
+    color: green    ;
+}
+
+.navbar {
+    list-style: none;
+    float: right;
+}
+
+.navbar li {
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+
+
+.item_menu {
+    float: left;
+    margin-right: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: yellow;
+   
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: green;
+}
+/*Login*/
+
+
+.login{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: e;
+    
+
+}
+.form_box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: blue;
+    text-align: center;
+}
+
+.form_box h1{
+    color: white;
+    text-align: uppercase;
+    font-weight: 500;
+}
+.form_box input[type ="text"],[type='password']{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid green;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.form_box input[type ="text"]:focus,[type='password']:focus{
+    width: 280px;
+    border-color: chartreuse;
+}
+.form_box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid green;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.form_box input[type="submit"]:hover{
+    background: cyan;
+}
+
+
+/*ABA PERFIL*/
+
+
+.painel_perfil{
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
+    height: 550px;
+    width: 20%;
+    padding-top: 100px;
+    background-color: white;
+    text-align: center;
+    float: left;
+    overflow: auto;
+}
+
+.painel_perfil img{
+    height: 200px;
+    width: 250px;
+
+}
+
+.selec{
+    color: black;
+}
+.produto{
+    display: none;
+    margin-left: 26%;
+    padding-top: 100px;
+    width: 60%;
+    text-align: center;
+    position: fixed;
+}
+
+.inputs{
+
+    width: 65%;
+    height: 30px;
+}
+
+.produto input[type = "submit"]{
+    border: 0;
+    background: blue;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid green;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.produto input[type="submit"]:hover{
+    background: cyan;
+}
+.box1 img {
+    height: 100px;
+}
+
+.box1 {
+    overflow: auto;
+    border-bottom: 5px solid #4b4bb1;
+    background-color: #232323;
+    color: white;
+    height: 10px;
+}
+
+.box1-item {
+    position: relative;
+    width: 1500px;
+    float: left;
+    text-align: center;
+    width: 20%;
+}
+
+.estoque{
+    display: none;
+    padding-top: 100px;
+    width: 100%;
+    text-align: center;  
+}

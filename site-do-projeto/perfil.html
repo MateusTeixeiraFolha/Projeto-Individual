@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mousseria.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/logo.png" alt="logo da mousseria">
+        <div class="container">
+            <ul class="navbar">
+                <li>
+                    <a href="status.html" class="item_menu">Status de pedido</span></a>
+                </li>
+                <li>
+                    <a href="notificacao.html" class="item_menu">Notificações</a>
+                </li>
+                <li>
+                    <a href="#div_perfil" class="item_menu"><span class="destaque" onclick="perfil()"> Perfil</span></a>
+                <li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="painel_perfil" id="painel_perf">
+        <img src="img/logo.png" alt="">
+
+        <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
+        <a class="selec" href="#estoque" onclick="estoqued()">
+            <h2 id="pro1">Estoque</h2>
+        </a>
+        <a class="selec" href="#produto" onclick="produtod()">
+            <h2 id="pro2">Produtos</h2>
+        </a>
+        <a href="login.html">Sair</a>
+    </div>
+    <div class="produto" id="produto">
+        <div id="container">
+            <h1>Produto:</h1>
+            <input class="inputs" type="text"> <br>
+            <h1>Quantidade: </h1>
+            <input class="inputs" type="text"> <br>
+            <h1>valor: </h1>
+            <input class="inputs" type="text"> <br>
+            <input type="submit" name="" value="Adicionar">
+        </div>
+    </div>
+    <div class="estoque" id="estoque">
+
+        <div class="container">
+
+            <div class="box1-item">
+
+                <img src="img/limão.jpg" alt="Mousse de Limão">
+
+                <h3>Mousse de Limão</h3>
+                <p>R$ 3,00
+                <p></p>
+
+            </div>
+
+            <div class="box1-item">
+
+                <img src="img/limão.jpg" alt="Mousse de Limão">
+
+                <h3>Mousse de Limão</h3>
+                <p>R$ 3,00
+                <p></p>
+
+            </div>
+
+            <div class="box1-item">
+
+                <img src="img/maracuja.jpg" alt="Mousse de maracujá">
+
+                <h3>Mousse de Maracujá</h3>
+                <p>R$ 3,00
+                <p></p>
+
+            </div>
+
+            <div class="box1-item">
+
+                <img src="img/morango.jpg" alt="Mousse de Morango">
+
+                <h3>Mousse de Morango</h3>
+                <p>R$ 3,00
+                <p></p>
+
+            </div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <div class="box1-item">
+
+                <img src="img/natonie.jpg" alt="Mousse natonia">
+
+                <h3>Mousse 'Moda da casa' Natonie</h3>
+                <p>R$ 3,00
+                <p></p>
+
+            </div>
+
+            <div class="box1-item">
+
+                <img src="img/limão trufado.jpg" alt="Mousse de Limão trufado">
+
+                <h3>Mousse de Limão Trufado</h3>
+                <p>R$ 3,50
+                <p></p>
+
+            </div>
+
+
+            <div class="box1-item">
+
+                <img src="img/maracuja trufado_n.jpg" alt="Mousse de Maracujá trufado">
+
+                <h3>Mousse de Maracujá Trufado</h3>
+                <p>R$ 3,50
+                <p></p>
+
+            </div>
+
+
+            <div class="box1-item">
+
+                <img src="img/morango trufado.jpg" alt="Mousse de Morango trufado">
+
+                <h3>Mousse de Morango Trufado</h3>
+                <p>R$ 3,50
+                <p></p>
+
+            </div>
+        </div>
+
+</body>
+
+
+</html>
+<script src="script.js"></script>
