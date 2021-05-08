@@ -19,6 +19,10 @@ body{
     
 }
 
+.mousseria{
+    text-align: center;
+    margin-top: 10%;
+}
 
 .header img {
     margin-left: 10px;
@@ -161,6 +165,15 @@ a:hover {
 .selec{
     color: black;
 }
+.selec img{
+    margin: 20px 50px 0px 0px ;
+    width: 30px;
+    height: 30px;
+}
+#pro3{
+    margin-left: 100px;
+    float: left;
+}
 .produto{
     display: none;
     margin-left: 26%;
@@ -207,11 +220,22 @@ a:hover {
 }
 
 .box1-item {
+    text-align: center;
     position: relative;
-    width: 1500px;
     float: left;
     text-align: center;
     width: 20%;
+}
+.cardapio{
+    margin-top: 5%;
+}
+.box-item {
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
+    margin-left: 2%;
+    float: left;
+    text-align: center;
+    width: 23%;
+    height: 390px;
 }
 
 .estoque{

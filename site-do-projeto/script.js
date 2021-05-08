@@ -29,6 +29,7 @@ function pedidod() {
     pro4.style.color='black'
     pro3.style.color = 'green';
     painel_perf.style.height= '850px';
+    seta.style.transform = 'rotate(90deg)';
     
 
 }
