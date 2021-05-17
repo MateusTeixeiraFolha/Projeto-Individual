@@ -33,3 +33,6 @@ function pedidod() {
     
 
 }
+function pedi() {
+    set.style.transform = 'rotate(90deg)';
+}

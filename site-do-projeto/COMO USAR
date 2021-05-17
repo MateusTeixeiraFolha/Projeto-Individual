@@ -1,0 +1,58 @@
+entre no banco de dados e configure um usuario para sua empresa.
+PASSO-A-PASSO-DE-COMO-CRIAR-UM-USUARIO.
+Instale o MSQL workbench(fique de olha na versão).
+Habilite o serviço (digite 'serviço' na barra de navegação windowns [iniciar], seleciona alguma coluna e aperta (m)ao encontrar o MySQL clique com o botão direito do mouse e abre as propriedades, altere o tipo de inicialização para 'Manual' e inicie o serviço).
+abre o workbench, entre em root.
+No menu do lado esquerda da tela vá até administration(administração) (do lado de schemas(esquemas)).
+procure por 'Users and privileges'(Usuário e privilégios).
+Procure por 'Add Account'(adicionar uma conta).
+em 'Login Name'(nome de usuário) digite o nome de sua empresa.
+em Password (senha) digite a senha da sua empresa e confirma ela em Confirm Password(confirme sua senha).
+Feito tudo isso vá para: Schemas Privileges(Sistema de Privilégios).
+Diga quais são a permissão de usuario(para proteger seus dados) e conceda o que achar necessário para o usuario.
+crie um banco para você com o usuario:
+
+create database (NOME DA EMPRESA);
+
+ use (NOME DA EMPRESA);
+
+CREATE TABLE usuario (
+	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(50),
+	login VARCHAR(50),
+	senha VARCHAR(50)
+);
+
+CREATE TABLE pedidos(
+    idPedidos int PRIMARY KEY AUTO_INCREMENT,
+    nomePedido VARCHAR(50)
+);
+
+CREATE TABLE identificador(
+    idIdentificador INT PRIMARY KEY AUTO_INCREMENT,
+    nomePedido varchar(200),
+    pagamento VARCHAR(50),
+    preco DOUBLE,
+    localPedido VARCHAR(70),
+    cliente VARCHAR(50),
+    telefone VARCHAR(14),
+    fkPedidos INT
+);
+
+CREATE TABLE desc_produto(
+    idProduto INT PRIMARY KEY AUTO_INCREMENT,
+    nomeProduto VARCHAR(100),
+    quantidade VARCHAR(5),
+    valor DOUBLE,
+    imagem CHAR
+
+);
+CREATE TABLE produto(
+    idProduto INT PRIMARY KEY AUTO_INCREMENT,
+    NomeProduto VARCHAR (100),
+    quantidade VARCHAR (5),
+    valor DOUBLE,
+    fkProduto INT,
+    FOREIGN KEY (fkProduto) references desc_produto(idProduto)
+);
+
