@@ -15,7 +15,7 @@
         <img src="img/logo.png" alt="logo da mousseria">
             <ul class="navbar">
                 <li>
-                    <a class="item_menu">Home</a>
+                    <a href="index.html" class="item_menu">Home</a>
                 </li>
                 <li>
                     <a href="cadarpio.html" class="item_menu">Cardápio</a>
@@ -36,19 +36,82 @@
     
     <div class="div_form">
         <div class="container">
-            <form class="form_box">
-                <h1>Fazer pedido</h1>
-                <p>Nome:</p> <br>
-                <input type="text" name="nome" class="form_pedido">
-                <p>Endereço:</p><br>
-                <input type="" name="" class="form_pedido">
-                <p>Telefone:</p><br>
-                <input type="tel" name="" class="form_pedido">
-                <p>Pedido:</p><br>
-                <input type="text" name="" class="form_pedido1">
+          <form class="form_box">
+            <h1>Fazer pedido</h1>
+            <div>
+                <div style="float: left;margin-left: 10px; ">
+                    <p>Nome:</p>
+                    <input type="text" name="cliente" class="form_pedido">
 
+                    <p>Telefone:</p>
+                    <input type="tel" name="telefone" class="form_pedido">
+                </div>
+                <div>
+                    CEP: 
+                        <input type="" name="cep" class="form_pedido" id="cep"><br>
+                    bairro:
+                        <input type="" name="bairro" class="form_pedido" id="bairro"><br>
+                    <span style="margin-left: 80px; float: left; overflow: auto;">
+                        cidade:
+                        <input type="" name="cidade" class="form_pedido" id="localidade"></span>
+                    uf: 
+                        <input type="" name="uf" class="form_pedids" id="uf"><br>
+                        <span style=" margin-left: 10px;">
+                    Rua: 
+                        <input type="" name="logradouro" class="form_pedido" id="logradouro"></span><br>
+                     <span style="margin-left: 310px;">   
+                    N.°: 
+                        <input type="" name="numero" class="form_pedido" id="numero"> 
+                      cpto:   <input type="" name="complemento" class="form_pedids" id="complemento">
+                    </span>
+                </div>
+
+
+            </div><br>
+            <p>Pedido:</p>
+            <textarea class="form_pedido1" cols="20" rows="4" placeholder="Insira a descrição"
+                name="descricao"></textarea>
+
+             <!-- botão de enviar  -->
+            <input type="submit" name="" value="Enviar" class="btn-entrar">
+            </form> 
+            <!-- <form id="form_cadastro" class="form_box" method="post" onsubmit="return pedido()">
+                <h1>Fazer pedido</h1>
+                <div>
+                    <div style="float: left; ">
+                        <p>Nome:</p>
+                        <input type="text" name="cliente" class="form_pedido">
+
+                        <p>Telefone:</p>
+                        <input type="tel" name="telefone" class="form_pedido">
+                    </div>
+                    <div>
+                        CEP: <span style="margin-left: 4%;">
+                            <input type="" name="cep" class="form_pedido" id="cep"></span><br>
+                        bairro: <span style="margin-left: 2%;">
+                            <input type="" name="bairro" class="form_pedido" id="bairro"></span><br>
+                        <span style="margin-left: 13.5%;">
+                            cidade:
+                            <input type="" name="cidade" class="form_pedid" id="localidade"></span>
+                        uf: <span style="margin-left: 3%;">
+                            <input type="" name="uf" class="form_pedids" id="uf"></span><br>
+                        logradouro: <span style="margin-right: 25px;">
+                            <input type="" name="logradouro" class="form_pedido" id="logradouro"></span><br>
+                            <div style="float: left; margin-left: 13%;">
+                        numero: 
+                            <input type="" name="numero" class="form_pedido" id="numero"> </div>
+                           <span style="float: left;"> cpto:</span>   <input type="" name="complemento" class="form_pedids" id="complemento">
+                    </div>
+
+
+                </div><br>
+                <p>Pedido:</p>
+                <textarea class="form_pedido1" cols="20" rows="4" placeholder="Insira a descrição"
+                    name="descricao"></textarea>
+
+                 botão de enviar 
                 <input type="submit" name="" value="Enviar" class="btn-entrar">
-            </form>
+            </form> -->
         </div>
     </div>
 
@@ -60,3 +123,33 @@
 </body>
 
 </html>
+<script src="fetch-api/main.js"> </script>
+<script>
+    function pedido() {
+
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/pedido/fazerPedido", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+
+            }
+        });
+
+        return false;
+    }
+
+
+
+</script>
