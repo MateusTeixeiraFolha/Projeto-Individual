@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mousseria.css">
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+            <img src="img/logo.png" alt="logo da mousseria">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html" class="item_menu">Home</a>
+                </li>
+                <li>
+                    <a href="cadarpio.html" class="item_menu"><span class="destaque">Cardápio</span></a>
+                </li>
+                <li>
+                    <a href="pedido.html" class="item_menu">Pedido</a>
+                </li>
+
+                <li>
+                    <a href="login.html " class="item_menu">Login</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <br>
+    <div class="cardapio">
+
+        <div class="container">
+
+
+            <div class="box-item">
+
+                <img src="img/limão.jpg" alt="Mousse de Limão">
+
+                <h3>Mousse de Limão</h3>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico0">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+
+            <div class="box-item">
+
+                <img src="img/maracuja.jpg" alt="Mousse de maracujá">
+
+                <h3>Mousse de Maracujá</h3>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico1">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+
+            <div class="box-item">
+
+                <img src="img/morango.jpg" alt="Mousse de Morango">
+
+                <h3>Mousse de Morango</h3>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico2">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+
+           
+
+            <div class="box-item">
+
+                <img src="img/limão trufado.jpg" alt="Mousse de Limão trufado">
+
+                <h3>Mousse de Limão Trufado</h3>
+                <p>R$ 3,50</p>
+
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico3">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+            </div>
+
+
+            <div class="box-item">
+
+                <img src="img/maracuja trufado_n.jpg" alt="Mousse de Maracujá trufado">
+
+                <h3>Mousse de Maracujá Trufado</h3>
+                <p>R$ 3,50</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico4">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="box-item">
+
+                <img src="img/morango trufado.jpg" alt="Mousse de Morango trufado">
+
+                <h3>Mousse de Morango Trufado</h3>
+                <p>R$ 3,50</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico5">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+
+            <div class="box-item">
+
+                <img src="img/natonie.jpg" alt="Mousse natonie">
+
+                <h3>'Moda da casa' Natonie</h3>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir()">-</button>
+                    <b id="b_numerico6">0</b>
+                    <button onclick="aumentar()">+</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <h1>Mousseria Teixeira</h1>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var sub = [];
+    var soma = [];
+    var diminuiu = 0;
+    var aumentou = 0;
+    function diminuir(){
+        var quantidade = sub.length
+        for(var i = 0; i < quantidade; i ++){
+            sub +=1;
+            diminuiu +=1;
+            b_numerico0.innerHTML +=`${diminuiu.length}`;
+        } 
+    }
+
+    function aumentar() {
+        var quantidade = soma.length
+        for(var i = 0; i < quantidade; i ++){
+            soma +=1;
+            aumentou +=1;
+            b_numerico0.innerHTML +=`${aumentou.length}`;
+    }
+}
+</script>
