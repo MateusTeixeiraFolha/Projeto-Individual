@@ -46,9 +46,10 @@
                 <h3>Mousse de Limão</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir0()">-</button>
                     <b id="b_numerico0">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar0()">+</button>
+                    <button class="bont-entrar">Adicionar</button>
 
                 </div>
 
@@ -61,9 +62,9 @@
                 <h3>Mousse de Maracujá</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir1()">-</button>
                     <b id="b_numerico1">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar1()">+</button>
 
                 </div>
 
@@ -76,15 +77,15 @@
                 <h3>Mousse de Morango</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir2()">-</button>
                     <b id="b_numerico2">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar2()">+</button>
 
                 </div>
 
             </div>
 
-           
+
 
             <div class="box-item">
 
@@ -94,9 +95,9 @@
                 <p>R$ 3,50</p>
 
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir3()">-</button>
                     <b id="b_numerico3">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar3()">+</button>
 
                 </div>
             </div>
@@ -109,9 +110,9 @@
                 <h3>Mousse de Maracujá Trufado</h3>
                 <p>R$ 3,50</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir4()">-</button>
                     <b id="b_numerico4">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar4()">+</button>
 
                 </div>
 
@@ -125,9 +126,9 @@
                 <h3>Mousse de Morango Trufado</h3>
                 <p>R$ 3,50</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir5()">-</button>
                     <b id="b_numerico5">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar5()">+</button>
 
                 </div>
 
@@ -140,16 +141,16 @@
                 <h3>'Moda da casa' Natonie</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir()">-</button>
+                    <button onclick="diminuir6()">-</button>
                     <b id="b_numerico6">0</b>
-                    <button onclick="aumentar()">+</button>
+                    <button onclick="aumentar6()">+</button>
 
                 </div>
 
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <div class="container">
             <h1>Mousseria Teixeira</h1>
@@ -159,25 +160,107 @@
 
 </html>
 <script>
-    var sub = [];
-    var soma = [];
-    var diminuiu = 0;
-    var aumentou = 0;
-    function diminuir(){
-        var quantidade = sub.length
-        for(var i = 0; i < quantidade; i ++){
-            sub +=1;
-            diminuiu +=1;
-            b_numerico0.innerHTML +=`${diminuiu.length}`;
-        } 
+  var maracuja =[]; var valorTotal =0;
+    var contagem0 = 0;   var contagem1 = 0;var contagem2 = 0;var contagem3 = 0;var contagem4 = 0;var contagem5 = 0;var contagem6 = 0;
+    function diminuir0() {
+        contagem0 -= 1;
+        valorTotal -=3;
+        if(contagem0 >=0){
+
+            b_numerico0.innerHTML = `${contagem0}`;
+        }
+       
+
+    }
+   
+    function aumentar0() {
+        contagem0 += 1;
+       
+        b_numerico0.innerHTML = `${contagem0}`;
+        var mousse = maracuja.length;
+       
+ 
+            
+        
+        alert(valorTotal +=3);
+    }
+    function diminuir1() {
+        contagem1 -= 1;
+        if(contagem1 >=0){
+
+            b_numerico1.innerHTML = `${contagem1}`;
+        }
+
     }
 
-    function aumentar() {
-        var quantidade = soma.length
-        for(var i = 0; i < quantidade; i ++){
-            soma +=1;
-            aumentou +=1;
-            b_numerico0.innerHTML +=`${aumentou.length}`;
+    function aumentar1() {
+        contagem1 += 1;
+        b_numerico1.innerHTML = `${contagem1}`;
+
+    }  function diminuir2() {
+        contagem2 -= 1;
+        if(contagem2 >=0){
+
+            b_numerico2.innerHTML = `${contagem2}`;
+        }
+
     }
-}
+
+    function aumentar2() {
+        contagem2 += 1;
+        b_numerico2.innerHTML = `${contagem2}`;
+
+    }  function diminuir3() {
+        contagem3 -= 1;
+        if(contagem3 >=0){
+
+            b_numerico3.innerHTML = `${contagem3}`;
+        }
+
+    }
+
+    function aumentar3() {
+        contagem3 += 1;
+        b_numerico3.innerHTML = `${contagem3}`;
+
+    }  function diminuir4() {
+        contagem4 -= 1;
+        if(contagem4 >=0){
+
+            b_numerico4.innerHTML = `${contagem4}`;
+        }
+
+    }
+
+    function aumentar4() {
+        contagem4 += 1;
+        b_numerico4.innerHTML = `${contagem4}`;
+
+    }  function diminuir5() {
+        contagem5 -= 1;
+        if(contagem5 >=0){
+
+            b_numerico5.innerHTML = `${contagem5}`;
+        }
+
+    }
+
+    function aumentar5() {
+        contagem5 += 1;
+        b_numerico5.innerHTML = `${contagem5}`;
+
+    }  function diminuir6() {
+        contagem6 -= 1;
+        if(contagem6 >=0){
+
+            b_numerico6.innerHTML = `${contagem6}`;
+        }
+
+    }
+
+    function aumentar6() {
+        contagem6 += 1;
+        b_numerico6.innerHTML = `${contagem6}`;
+
+    }
 </script>

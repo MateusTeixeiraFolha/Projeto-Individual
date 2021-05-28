@@ -45,110 +45,186 @@
     </div>
     <div class="produto" id="produto">
         <div id="container">
-            <h1>Produto:</h1>
-            <input class="inputs" type="text" name="produto"> <br>
+            <form id="form_armazem" class="form_box" method="post" onsubmit="return estocar()">
+               <h1>Produto:</h1>
+            <input class="inputs" type="text" name="nomeProduto"> <br>
             <h1>Quantidade: </h1>
             <input class="inputs" type="text" name="quantidade"> <br>
             <h1>valor: </h1>
-            <input class="inputs" type="text"> <br>
-            <input type="submit" name="valor" value="Adicionar">
+            <input class="inputs" type="text" name="valor"> <br>
+            <input type="submit" value="Adicionar">
+        </form>
         </div>
     </div>
     <div class="estoque" id="estoque">
 
         <div class="container">
 
-            <div class="box1-item">
+            <div class="box-item">
 
                 <img src="img/limão.jpg" alt="Mousse de Limão">
 
                 <h3>Mousse de Limão</h3>
-                <p>R$ 3,00
-                <p></p>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir0()">-</button>
+                    <b id="b_numerico7">0</b>
+                    <button onclick="aumentar0()">+</button>
+
+                </div>
 
             </div>
 
-            <div class="box1-item">
-
-                <img src="img/limão.jpg" alt="Mousse de Limão">
-
-                <h3>Mousse de Limão</h3>
-                <p>R$ 3,00
-                <p></p>
-
-            </div>
-
-            <div class="box1-item">
+            <div class="box-item">
 
                 <img src="img/maracuja.jpg" alt="Mousse de maracujá">
 
                 <h3>Mousse de Maracujá</h3>
-                <p>R$ 3,00
-                <p></p>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir1()">-</button>
+                    <b id="b_numerico8">0</b>
+                    <button onclick="aumentar1()">+</button>
+
+                </div>
 
             </div>
 
-            <div class="box1-item">
+            <div class="box-item">
 
                 <img src="img/morango.jpg" alt="Mousse de Morango">
 
                 <h3>Mousse de Morango</h3>
-                <p>R$ 3,00
-                <p></p>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir2()">-</button>
+                    <b id="b_numerico9">0</b>
+                    <button onclick="aumentar2()">+</button>
 
-            </div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-            <div class="box1-item">
-
-                <img src="img/natonie.jpg" alt="Mousse natonia">
-
-                <h3>Mousse 'Moda da casa' Natonie</h3>
-                <p>R$ 3,00
-                <p></p>
+                </div>
 
             </div>
 
-            <div class="box1-item">
+
+
+            <div class="box-item">
 
                 <img src="img/limão trufado.jpg" alt="Mousse de Limão trufado">
 
                 <h3>Mousse de Limão Trufado</h3>
-                <p>R$ 3,50
-                <p></p>
+                <p>R$ 3,50</p>
 
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir3()">-</button>
+                    <b id="b_numerico10">0</b>
+                    <button onclick="aumentar3()">+</button>
+
+                </div>
             </div>
 
 
-            <div class="box1-item">
+            <div class="box-item">
 
                 <img src="img/maracuja trufado_n.jpg" alt="Mousse de Maracujá trufado">
 
                 <h3>Mousse de Maracujá Trufado</h3>
-                <p>R$ 3,50
-                <p></p>
+                <p>R$ 3,50</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir4()">-</button>
+                    <b id="b_numerico11">0</b>
+                    <button onclick="aumentar4()">+</button>
+
+                </div>
 
             </div>
 
 
-            <div class="box1-item">
+            <div class="box-item">
 
                 <img src="img/morango trufado.jpg" alt="Mousse de Morango trufado">
 
                 <h3>Mousse de Morango Trufado</h3>
-                <p>R$ 3,50
-                <p></p>
+                <p>R$ 3,50</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir5()">-</button>
+                    <b id="b_numerico12">0</b>
+                    <button onclick="aumentar5()">+</button>
+
+                </div>
+
+            </div>
+
+            <div class="box-item">
+
+                <img src="img/natonie.jpg" alt="Mousse natonie">
+
+                <h3>'Moda da casa' Natonie</h3>
+                <p>R$ 3,00</p>
+                <div class="cardapio_numerico">
+                    <button onclick="diminuir6()">-</button>
+                    <b id="b_numerico13">0</b>
+                    <button onclick="aumentar6()">+</button>
+
+                </div>
 
             </div>
         </div>
-
-
-        <div class="footer">
-            <div class="container">
-                <h1>Mousseria Teixeira</h1>
+        <div class="extra">
+            <div id="div_erro" class="msg_erro">
             </div>
+
+            <img src="" id="img_aguarde" style="display: none;">
+            <!--style="display: none;"-->
+
         </div>
+
+
+
 </body>
 
 
 </html>
-<script src="script.js"></script>
+<script src="js/script.js">
+
+
+</script>
+<script>
+function estocar() {
+    
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_armazem));
+        fetch("/armazem/estocar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'perfil.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
+
+</script>
