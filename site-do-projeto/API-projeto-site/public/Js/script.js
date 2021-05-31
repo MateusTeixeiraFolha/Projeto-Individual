@@ -165,8 +165,22 @@ function cliented() {
 
 function detalhe() {
     codigo.style.display = 'block';
+    piechart_3d.style.display = 'none';
+    pro6.style.color='black'
+    pro5.style.color = 'green';
+    
+}
+function grafico() {
+    codigo.style.display = 'none';
+    detalhe_local.style.display = 'none';
+    piechart_3d.style.display = 'block';
+    pro6.style.color='green'
+    pro5.style.color = 'black';
+    codigo.style.color = 'black'
+
 }
 function endereco() {
     detalhe_local.style.display = 'block';
     numero_pedido.innerHTML =`(${codigo.value})`;
+    codigo.style.color = 'red'
 }

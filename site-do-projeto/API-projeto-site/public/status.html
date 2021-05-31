@@ -7,6 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mousseria Teixeira - Status</title>
     <link rel="stylesheet" href="mousseria.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Maracujá', 11],
+                ['Limão', 6],
+                ['Morango', 4],
+                ['Trufado de maracujá', 3],
+                ['Trufado de Morango', 4],
+                ['"Moda da casa" Natonie', 3],
+                ['Trufado de Limão', 3]
+
+            ]);
+
+            var options = {
+                title: 'Qual é o Mousse preferido?',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 
 <body>
@@ -36,20 +62,25 @@
             <img src="img/logo.png" alt="">
 
             <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
-           
-                <div>
-                    <a class="selec" href="#codigo"> <h2 id="pro1" onclick="detalhe()">Pedidos</h2> </a>
 
-                    <a id="codigo" style="display: none;" onclick="endereco()" href='#detalhe_local'>id do pedido</a>
-                </div>
-           
+            <div>
+                <a class="selec" href="#codigo">
+                    <h2 id="pro5" onclick="detalhe()">Pedidos</h2>
+                </a>
+
+                <a id="codigo" style="display: none;" onclick="endereco()" class="selec" href='#detalhe_local'>id do pedido</a>
+            </div>
+            <a href="#piechart_3d" id="pro6" class="selec">
+                <h2 onclick="grafico()">analise</h2>
+            </a>
+
             <a href="login.html"><img src="img/sair.png" class="imgs" alt="icone de sair"></a>
             <!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
         </div>
     </div>
     <div id="detalhe_local" class="detalhado">
         <div class="container">
-            <h1>Pedido <span id="numero_pedido"></span></h1> 
+            <h1>Pedido <span id="numero_pedido"></span></h1>
             <input type="text">
             <h1>Local</h1>
             <input type="text">
@@ -58,6 +89,13 @@
             <button class="btn-entrar">Enviar</button>
         </div>
     </div>
+    <div class="grafico">
+        <div class="container">
+            <div id="piechart_3d"
+                style="width: 900px; height: 500px; margin-left: 45vh; margin-top: 20vh; display: none;"></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
