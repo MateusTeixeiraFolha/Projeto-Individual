@@ -98,6 +98,38 @@ a:hover {
     text-align: center;
 }
 
+
+.carrinho {
+    text-align: center;
+    position: fixed;
+    overflow: auto;
+    background-color: rgb(163, 218, 255);
+    margin-top:100px ;
+    margin-left: 1220px;
+
+}
+.price img{
+    margin-top: 10px;
+    width: 60px;
+}
+
+.btn_carrinho{
+    border: 0;
+    background-color: blue;
+    width: 80px;
+    height: 30px;
+    display: block;
+    border: 2px solid rgb(30, 155, 30);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btn_carrinho:hover{
+    background: cyan;
+}
+
 .form_box h1{
     text-align: uppercase;
     text-align: center;
@@ -157,11 +189,23 @@ a:hover {
     width: 30px;
     border-color: chartreuse;
 }
-
 .cardapio_numerico button{
     background-color: rgb(30, 155, 30);
     color: yellow;
     width: 25px;
+    border-radius: 24px;
+    
+}
+.cardapio_diminuir {
+    background-color: rgb(30, 155, 30);
+    color: yellow;
+    width: 25px;
+    border-radius: 24px;
+}
+.btn_estoque{
+    background-color: rgb(30, 155, 30);
+    color: yellow;
+    width: 100px;
     border-radius: 24px;
 }
 .btn-entrar{
@@ -202,65 +246,66 @@ a:hover {
     background: cyan;
 }
 
-/*ABA PERFIL*/
-
-.painel_perfil img{
-height: 100px;
-
+.whats{
+    margin-left: 300px;
+    margin-right: 0;
+    float: left;
+    overflow: auto;
+    width: 30px;
+}
+.mous{
+    margin-top: 60px;
+    margin-right: 150px;
+    color: chartreuse;
+    
 }
 
-.painel_perfil{
+/*ABA PERFIL*/
+
+
+
+
+
+.painel_perfil_notifica{
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
-    height: 550px;
-    width: 20%;
-    padding-top: 100px;
+    height: 100vh;
+    width: 40vh; 
     background-color: white;
     text-align: center;
     float: left;
     overflow: auto;
-}
-
-.painel_perfil img{
-    height: 200px;
-    width: 250px;
 
 }
 
+.painel_perfil_notifica img{
+    text-align: center;
+    margin-top: 12vh;
+    height: 15vh;
+    width: 15vh;
+
+}
 .selec{
     color: black;
 }
-.selec img{
-    margin: 20px 50px 0px 0px ;
-    width: 30px;
-    height: 30px;
-}
-#pro3{
-    margin-left: 100px;
-    float: left;
-}
+
 .produto{
     display: none;
-    margin-left: 26%;
-    padding-top: 100px;
-    width: 60%;
+    margin-left: 25vh;
     text-align: center;
-    position: fixed;
+   
 }
 
 .inputs{
-
-    width: 65%;
-    height: 30px;
+    width: 75vh;
+    height: 4vh;
 }
 
 .produto input[type = "submit"]{
     border: 0;
     background: rgb(91, 91, 248);
     display: block;
-    margin: 10px auto;
     text-align: center;
     border: 2px solid rgb(30, 155, 30);
-    padding: 14px 40px;
     outline: none;
     color: white;
     border-radius: 24px;
@@ -313,6 +358,14 @@ height: 100px;
     text-align: center;  
 }
 
+.detalhado{
+    display: none;
+    background-color: rgb(53, 80, 235);
+    margin-left: 70vh;
+    width: 100vh;
+    margin-top: 20vh;
+    text-align: center;
+}
 /*VISÃO, MISSÃO, VALORES*/
 
 .missao{
@@ -325,9 +378,6 @@ height: 100px;
 }
 
 
-.seta{
-    height: 10px;
-}
 
 /*FOOTER*/
 

@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mousseria Teixeira - Cardápio</title>
     <link rel="stylesheet" href="mousseria.css">
 </head>
 
 <body>
+
+
+
+
+
     <div class="header">
 
         <div class="container">
@@ -19,7 +24,7 @@
                     <a href="index.html" class="item_menu">Home</a>
                 </li>
                 <li>
-                    <a href="cadarpio.html" class="item_menu"><span class="destaque">Cardápio</span></a>
+                    <a class="item_menu"><span class="destaque">Cardápio</span></a>
                 </li>
                 <li>
                     <a href="pedido.html" class="item_menu">Pedido</a>
@@ -34,6 +39,20 @@
 
     </div>
     <br>
+
+    <div class="carrinho">
+        <div class="container">
+            <div class="price">
+                <img src="img/carrinnho.png" alt="icone de carrinho de compra"><br>
+                <h4>Total da compra</h4>
+                <b>R$<span id="span_total">0</span></b><br>
+                <div>
+                    <button class="btn_carrinho" onclick="efetuar('pedido')">Adicionar</button>
+                    <button class="btn_carrinho" onclick="limparCarrinho()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="cardapio">
 
         <div class="container">
@@ -43,13 +62,13 @@
 
                 <img src="img/limão.jpg" alt="Mousse de Limão">
 
-                <h3>Mousse de Limão</h3>
+                <h3 id="idlimao">Mousse de Limão</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
                     <button onclick="diminuir0()">-</button>
                     <b id="b_numerico0">0</b>
                     <button onclick="aumentar0()">+</button>
-                    <button class="bont-entrar">Adicionar</button>
+
 
                 </div>
 
@@ -151,6 +170,8 @@
         </div>
     </div>
 
+
+
     <div class="footer">
         <div class="container">
             <h1>Mousseria Teixeira</h1>
@@ -160,107 +181,169 @@
 
 </html>
 <script>
-  var maracuja =[]; var valorTotal =0;
-    var contagem0 = 0;   var contagem1 = 0;var contagem2 = 0;var contagem3 = 0;var contagem4 = 0;var contagem5 = 0;var contagem6 = 0;
+    var valorTotal = 0;
+
+    var contagem0 = 0; var contagem1 = 0; var contagem2 = 0; var contagem3 = 0; var contagem4 = 0; var contagem5 = 0; var contagem6 = 0;
+  
     function diminuir0() {
-        contagem0 -= 1;
-        valorTotal -=3;
-        if(contagem0 >=0){
-
-            b_numerico0.innerHTML = `${contagem0}`;
-        }
        
-
+        contagem0 -= 1;
+        valorTotal -= 3;
+        if (contagem0 <= 0 && valorTotal <= 0) {
+            contagem0 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico0.innerHTML = `${contagem0}`;
     }
-   
     function aumentar0() {
         contagem0 += 1;
-       
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico0.innerHTML = `${contagem0}`;
-        var mousse = maracuja.length;
-       
- 
-            
-        
-        alert(valorTotal +=3);
+
     }
     function diminuir1() {
         contagem1 -= 1;
-        if(contagem1 >=0){
-
-            b_numerico1.innerHTML = `${contagem1}`;
+        valorTotal -= 3;
+        if (contagem1 < 0 && valorTotal < 0) {
+            contagem1 = 0;
+            valorTotal = 0;
         }
-
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico1.innerHTML = `${contagem1}`;
     }
-
     function aumentar1() {
         contagem1 += 1;
+        valorTotal += 3;
         b_numerico1.innerHTML = `${contagem1}`;
-
-    }  function diminuir2() {
-        contagem2 -= 1;
-        if(contagem2 >=0){
-
-            b_numerico2.innerHTML = `${contagem2}`;
-        }
+        span_total.innerHTML = `${valorTotal}`;
 
     }
-
+    function diminuir2() {
+        contagem2 -= 1;
+        valorTotal -= 3;
+        if (contagem2 < 0 && valorTotal < 0) {
+            contagem2 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico2.innerHTML = `${contagem2}`;
+    }
     function aumentar2() {
         contagem2 += 1;
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico2.innerHTML = `${contagem2}`;
-
-    }  function diminuir3() {
-        contagem3 -= 1;
-        if(contagem3 >=0){
-
-            b_numerico3.innerHTML = `${contagem3}`;
-        }
-
     }
-
+    function diminuir3() {
+        contagem3 -= 1;
+        valorTotal -= 3;
+        if (contagem3 < 0 && valorTotal < 0) {
+            contagem3 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico3.innerHTML = `${contagem3}`;
+    }
     function aumentar3() {
         contagem3 += 1;
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico3.innerHTML = `${contagem3}`;
-
-    }  function diminuir4() {
-        contagem4 -= 1;
-        if(contagem4 >=0){
-
-            b_numerico4.innerHTML = `${contagem4}`;
-        }
-
     }
-
+    function diminuir4() {
+        contagem4 -= 1;
+        valorTotal -= 3;
+        if (contagem4 < 0 && valorTotal < 0) {
+            contagem4 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico4.innerHTML = `${contagem4}`;
+    }
     function aumentar4() {
         contagem4 += 1;
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico4.innerHTML = `${contagem4}`;
 
-    }  function diminuir5() {
-        contagem5 -= 1;
-        if(contagem5 >=0){
-
-            b_numerico5.innerHTML = `${contagem5}`;
-        }
-
     }
-
+    function diminuir5() {
+        contagem5 -= 1;
+        valorTotal -= 3;
+        if (contagem5 < 0 && valorTotal < 0) {
+            contagem5 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico5.innerHTML = `${contagem5}`;
+    }
     function aumentar5() {
         contagem5 += 1;
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico5.innerHTML = `${contagem5}`;
 
-    }  function diminuir6() {
-        contagem6 -= 1;
-        if(contagem6 >=0){
-
-            b_numerico6.innerHTML = `${contagem6}`;
-        }
-
     }
-
+    function diminuir6() {
+        contagem6 -= 1;
+        valorTotal -= 3;
+        if (contagem6 < 0 && valorTotal < 0) {
+            contagem6 = 0;
+            valorTotal = 0;
+        }
+        span_total.innerHTML = `${valorTotal}`;
+        b_numerico6.innerHTML = `${contagem6}`;
+    }
     function aumentar6() {
         contagem6 += 1;
+        valorTotal += 3;
+        span_total.innerHTML = `${valorTotal}`;
         b_numerico6.innerHTML = `${contagem6}`;
 
+    }
+    function limparCarrinho() {
+      
+      span_total.innerHTML = `${valorTotal = 0}`;
+      b_numerico0.innerHTML = `${contagem0 = 0}`;
+      b_numerico1.innerHTML = `${contagem1 = 0}`;
+      b_numerico2.innerHTML = `${contagem2 = 0}`;
+      b_numerico3.innerHTML = `${contagem3 = 0}`;
+      b_numerico4.innerHTML = `${contagem4 = 0}`;
+      b_numerico5.innerHTML = `${contagem5 = 0}`;
+      b_numerico6.innerHTML = `${contagem6 = 0}`;
+      
+    }
+    function efetuar() {
+        window.location.href = 'pedido.html';
+    }
+
+</script>
+<script>
+        export function efetuar() {
+        if (contagem0 > 0) {
+            listagem.innerHTML =`${contagem0} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem1 > 0) {
+            listagem.innerHTML =`${contagem1} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem2 > 0) {
+            listagem.innerHTML =`${contagem2} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem3 > 0) {
+            listagem.innerHTML =`${contagem3} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem4 > 0) {
+            listagem.innerHTML =`${contagem4} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem5 > 0) {
+            listagem.innerHTML =`${contagem5} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+        if (contagem6 > 0) {
+            listagem.innerHTML =`${contagem6} Mousse de Limão, valor total: ${valorTotal}`; 
+        }
+      
+        
     }
 </script>

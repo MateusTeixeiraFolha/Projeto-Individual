@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mousseria Teixeira - Status</title>
     <link rel="stylesheet" href="mousseria.css">
 </head>
+
 <body>
     <div class="header">
         <img src="img/logo.png" alt="logo da mousseria">
@@ -19,7 +21,8 @@
                     <a href="notificacao.html" class="item_menu">Notificações</a>
                 </li>
                 <li>
-                    <a href="perfil.html" class="item_menu">perfil</a></li>
+                    <a href="perfil.html" class="item_menu">perfil</a>
+                </li>
                 <li>
 
             </ul>
@@ -28,19 +31,37 @@
 
     </div>
     <br>
-    <div class="painel_perfil" id="painel_perf">
-        <img src="img/logo.png" alt="">
+    <div class="painel_perfil_notifica" id="painel_perf">
+        <div class="container">
+            <img src="img/logo.png" alt="">
 
-        <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
-        <a class="selec" href="#idprod">
-            <h2 id="pro1">Pedidos</h2> 
-        </a>
-    
-        <div id="idprod">
+            <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
+           
+                <div>
+                    <a class="selec" href="#codigo"> <h2 id="pro1" onclick="detalhe()">Pedidos</h2> </a>
 
+                    <a id="codigo" style="display: none;" onclick="endereco()" href='#detalhe_local'>id do pedido</a>
+                </div>
+           
+            <a href="login.html"><img src="img/sair.png" class="imgs" alt="icone de sair"></a>
+            <!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
         </div>
-        <a href="login.html"><img src="img/sair.png" class="imgs" alt="icone de sair"></a><!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
-    
+    </div>
+    <div id="detalhe_local" class="detalhado">
+        <div class="container">
+            <h1>Pedido <span id="numero_pedido"></span></h1> 
+            <input type="text">
+            <h1>Local</h1>
+            <input type="text">
+            <h1>Forma de Pagamento</h1>
+            <input type="text">
+            <button class="btn-entrar">Enviar</button>
+        </div>
     </div>
 </body>
+
 </html>
+
+<script src="Js/script.js">
+
+</script>

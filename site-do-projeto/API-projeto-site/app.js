@@ -7,7 +7,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usuariosRouter = require('./routes/usuarios');
-var ProdutosRouter = require('./routes/Produtos');
+var ArmazemRouter = require('./routes/Armazem');
 var PedidoRouter = require('./routes/Pedido'); // cria-se uma requisição da rota
 var app = express();
 
@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/usuarios', usuariosRouter);
-app.use('/Produtos', ProdutosRouter);
+app.use('/Armazem', ArmazemRouter);
 app.use('/Pedido', PedidoRouter); //usa a rota
 module.exports = app;

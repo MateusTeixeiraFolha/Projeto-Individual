@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mousseria Teixeira - Notificações</title>
     <link rel="stylesheet" href="mousseria.css">
 </head>
 
@@ -30,22 +30,36 @@
         </div>
 
     </div>
-<br>
-    <div class="painel_perfil" id="painel_perf">
+    <br>
+    <div class="painel_perfil_notifica" id="painel_perf">
         <img src="img/logo.png" alt="">
 
-        <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
-        <a class="selec" href="#pedido" onclick="pedidod()">
-            <h2 id="pro3">Pedidos</h2>
-        
-        </a>
-        <a class="selec" href="#cliente" onclick="cleinted()">
+        <h3>Bem vindo! <br>
+            <span id="usuario"> Nome do usuário</span>
+        </h3>
+        <a class="selec" href="#cliente" onclick="cliented()">
             <h2 id="pro4">Cliente</h2>
         </a>
-        <a href="login.html"><img src="img/sair.png" class="imgs" alt="icone de sair"></a><!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
-    
+        <a class="selec" href="#pedido" onclick="pedidod()">
+            <h2 id="pro3">Pedidos</h2>
+        </a>
+        <a href="login.html"><img src="img/sair.png" alt="icone de sair"></a>
+        <!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
+
     </div>
-    <div class="produto" id="pedido">
+    <div id="cliente" class="detalhado">
+        <div class="container">
+            <h1>Cliente</h1>
+            <input type="text">
+            <h1>Local</h1>
+            <input type="text">
+            <h1>Telefone </h1>
+            <input type="text" name="" id="">
+           
+        </div>
+
+    </div>
+    <div class="detalhado" id="pedido">
         <div id="container">
             <h1>Produto:</h1>
             <input class="inputs" type="text"> <br>
@@ -53,21 +67,14 @@
             <input class="inputs" type="text"> <br>
             <h1>valor: </h1>
             <input class="inputs" type="text"> <br>
-            <input type="submit" name="" value="Adicionar">
+            <input type="submit" name="" value="Aceitar" class="btn-entrar">
         </div>
     </div>
 
-    <div id="cliente">
-        
-    </div>
+    
 
 
-    <div class="footer">
-        <div class="container">
-            <h1>Mousseria Teixeira</h1>
-        </div>
-    </div>
 </body>
 
 </html>
-<script src="script.js"></script>
+<script src="Js/script.js"></script>

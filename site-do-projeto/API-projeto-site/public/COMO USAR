@@ -42,8 +42,8 @@ CREATE TABLE usuario (
 CREATE TABLE produto(
     idProduto INT PRIMARY KEY AUTO_INCREMENT,
     NomeProduto VARCHAR (100),
-    quantidade INT,
-    valor DOUBLE,
+    quantidadeProduto INT,
+    valorProduto DOUBLE,
     fkPedidos INT,
     FOREIGN KEY (fkPedidos) references pedidos(idPedidos)
 );

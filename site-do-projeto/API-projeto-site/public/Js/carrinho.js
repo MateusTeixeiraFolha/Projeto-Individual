@@ -1,0 +1,1 @@
+import {efetuar} from '../cardapio.html'

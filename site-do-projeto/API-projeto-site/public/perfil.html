@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mousseria Teixeira - Perfil</title>
     <link rel="stylesheet" href="mousseria.css">
 </head>
 
@@ -30,7 +30,7 @@
 
     </div>
     <br>
-    <div class="painel_perfil" id="painel_perf">
+    <div class="painel_perfil_notifica" id="painel_perf">
         <img src="img/logo.png" alt="">
 
         <h3 id="usuario">Bem vindo! <br> Nome do usuário</h3>
@@ -41,19 +41,20 @@
             <h2 id="pro1">Estoque</h2>
         </a>
 
-        <a href="login.html"><img src="img/sair.png" alt="icone de sair"></a><!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
+        <a href="login.html"><img src="img/sair.png" alt="icone de sair"></a>
+        <!--<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>-->
     </div>
     <div class="produto" id="produto">
         <div id="container">
             <form id="form_armazem" class="form_box" method="post" onsubmit="return estocar()">
-               <h1>Produto:</h1>
-            <input class="inputs" type="text" name="nomeProduto"> <br>
-            <h1>Quantidade: </h1>
-            <input class="inputs" type="text" name="quantidade"> <br>
-            <h1>valor: </h1>
-            <input class="inputs" type="text" name="valor"> <br>
-            <input type="submit" value="Adicionar">
-        </form>
+                <h1>Produto:</h1>
+                <input class="inputs" type="text" name="nomeProduto"> <br>
+                <h1>Quantidade: </h1>
+                <input class="inputs" type="text" name="quantidadeProduto"> <br>
+                <h1>valor: </h1>
+                <input class="inputs" type="text" name="valorProduto"> <br>
+                <button id="btn_entrar" class="btn-entrar_login">Entrar</button>
+            </form>
         </div>
     </div>
     <div class="estoque" id="estoque">
@@ -67,9 +68,9 @@
                 <h3>Mousse de Limão</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir0()">-</button>
+                    <button onclick="diminuir0()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico7">0</b>
-                    <button onclick="aumentar0()">+</button>
+                    <button class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -82,9 +83,9 @@
                 <h3>Mousse de Maracujá</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir1()">-</button>
+                    <button onclick="diminuir1()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico8">0</b>
-                    <button onclick="aumentar1()">+</button>
+                    <button onclick="aumentar1()" class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -97,9 +98,9 @@
                 <h3>Mousse de Morango</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir2()">-</button>
+                    <button onclick="diminuir2()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico9">0</b>
-                    <button onclick="aumentar2()">+</button>
+                    <button onclick="aumentar2()" class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -115,9 +116,9 @@
                 <p>R$ 3,50</p>
 
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir3()">-</button>
+                    <button onclick="diminuir3()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico10">0</b>
-                    <button onclick="aumentar3()">+</button>
+                    <button onclick="aumentar3()" class="btn_estoque">Atualizar</button>
 
                 </div>
             </div>
@@ -130,9 +131,9 @@
                 <h3>Mousse de Maracujá Trufado</h3>
                 <p>R$ 3,50</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir4()">-</button>
+                    <button onclick="diminuir4()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico11">0</b>
-                    <button onclick="aumentar4()">+</button>
+                    <button onclick="aumentar4()" class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -146,9 +147,9 @@
                 <h3>Mousse de Morango Trufado</h3>
                 <p>R$ 3,50</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir5()">-</button>
+                    <button onclick="diminuir5()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico12">0</b>
-                    <button onclick="aumentar5()">+</button>
+                    <button onclick="aumentar5()" class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -161,9 +162,9 @@
                 <h3>'Moda da casa' Natonie</h3>
                 <p>R$ 3,00</p>
                 <div class="cardapio_numerico">
-                    <button onclick="diminuir6()">-</button>
+                    <button onclick="diminuir6()" class="cardapio_diminuir">-</button>
                     <b id="b_numerico13">0</b>
-                    <button onclick="aumentar6()">+</button>
+                    <button onclick="aumentar6()" class="btn_estoque">Atualizar</button>
 
                 </div>
 
@@ -189,18 +190,18 @@
 
 </script>
 <script>
-function estocar() {
-    
-        aguardar();
+    function estocar() {
+
+
         var formulario = new URLSearchParams(new FormData(form_armazem));
-        fetch("/armazem/estocar", {
+        fetch("/armazem/estoque", {
             method: "POST",
             body: formulario
         }).then(function (response) {
 
             if (response.ok) {
 
-                window.location.href = 'perfil.html';
+                alert("Estoque atualizado com sucesso, verifique o estoque para saber mais.")
 
             } else {
 
@@ -208,23 +209,9 @@ function estocar() {
                 response.text().then(function (resposta) {
 
                 });
-                finalizar_aguardar();
             }
         });
-
         return false;
-    }
-
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display = 'block';
-        div_erro.style.display = 'none';
-    }
-
-    function finalizar_aguardar() {
-        btn_entrar.disabled = false;
-        img_aguarde.style.display = 'none';
-        div_erro.style.display = 'block';
     }
 
 </script>
