@@ -27,7 +27,7 @@ module.exports = {
     // altere APENAS username, password e database.
    
     username: 'Mousseria_Teixeira',
-    password: '*********************',
+    password: '*******************',
     database: 'Mousseria_Teixeira',
     host: '127.0.0.1',
     dialect: 'mysql',
