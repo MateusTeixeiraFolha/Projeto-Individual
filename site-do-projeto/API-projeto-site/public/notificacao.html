@@ -50,11 +50,11 @@
     <div id="cliente" class="detalhado">
         <div class="container">
             <h1>Cliente</h1>
-            <input type="text">
+            <input type="text" id="input_cliente" disabled="disabled" class="inputs">
             <h1>Local</h1>
-            <input type="text">
+            <input type="text" id="input_local" disabled="disabled" class="inputs">
             <h1>Telefone </h1>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="input_tel" disabled="disabled" class="inputs">
            
         </div>
 
@@ -62,12 +62,13 @@
     <div class="detalhado" id="pedido">
         <div id="container">
             <h1>Produto:</h1>
-            <input class="inputs" type="text"> <br>
+            <input class="inputs" type="text" id="input_produto" disabled="disabled"> <br>
             <h1>Quantidade: </h1>
-            <input class="inputs" type="text"> <br>
+            <input class="inputs" type="text" id="input_quantidade" disabled="disabled"> <br>
             <h1>valor: </h1>
-            <input class="inputs" type="text"> <br>
-            <input type="submit" name="" value="Aceitar" class="btn-entrar">
+            <input class="inputs" type="text" id="input_valor" disabled="disabled"> <br>
+            <input type="submit" name="send" value="Aceitar" class="btn-entrar" style="float: left; margin-left: 20vh;">
+            <input type="submit" name="nosend" value="Rejeitar" class="btn-recusar">
         </div>
     </div>
 

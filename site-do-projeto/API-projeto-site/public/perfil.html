@@ -48,12 +48,12 @@
         <div id="container">
             <form id="form_armazem" class="form_box" method="post" onsubmit="return estocar()">
                 <h1>Produto:</h1>
-                <input class="inputs" type="text" name="nomeProduto"> <br>
-                <h1>Quantidade: </h1>
-                <input class="inputs" type="text" name="quantidadeProduto"> <br>
+                <input class="inputs" type="text" name="nomeProduto" id="nomeProduto"> <br>
+                <h1>Quantidade: </h1>  
+                <input class="inputs" type="text" name="quantidadeProduto" id="quantidadeProduto"> <br>
                 <h1>valor: </h1>
-                <input class="inputs" type="text" name="valorProduto"> <br>
-                <button id="btn_entrar" class="btn-entrar_login">Entrar</button>
+                <input class="inputs" type="text" name="valorProduto" id="valorProduto"> <br>
+                <button id="btn_entrar" class="btn-entrar_login">Salvar</button>
             </form>
         </div>
     </div>
@@ -200,9 +200,11 @@
         }).then(function (response) {
 
             if (response.ok) {
-
-                alert("Estoque atualizado com sucesso, verifique o estoque para saber mais.")
-
+               
+                alert("Estoque atualizado com sucesso, verifique o estoque para saber mais.");
+                nomeProduto.value = ``;
+                quantidadeProduto.value = ``;
+                valorProduto.value = ``;
             } else {
 
                 console.log('Erro de cadastro!');
